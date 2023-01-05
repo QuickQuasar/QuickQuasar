@@ -8,9 +8,11 @@ This **Quick Quasar Project** is a portfolio of Apps using the Quasar framework 
 
 QQ Example Applications are designated with a qq prefix (qqElec for Electron) and three digit number.  Each is available as a separate GitHub repository.
 
+**Single-Page Applications (SPA):**  
 - [qq101Basexxx]
-- qq102yyy
-Electron:
+- qq102yyy  
+- 
+**Electron:**
 - [qqElec101Base](https://github.com/QuickQuasar/qqElec101Base)
 - qqElec102 ...
 - qqElec103 + pin + ts??
