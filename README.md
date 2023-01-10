@@ -13,9 +13,12 @@ QQ Example Applications are designated with a qq prefix (qqElec for Electron) an
 - qq102yyy  
 - 
 **Electron:**
-- [qqElec101Base](https://github.com/QuickQuasar/qqElec101Base)
-- qqElec102 ...
-- qqElec103 + pin + ts??
+- [qqElec101Base](https://github.com/QuickQuasar/qqElec101Base) -- Base Electron App for quick Electron desktop apps  
+- qqElec102 ... OpenFileDialog with Inter-Process Communication IPC  
+-- Use of electron-preload.js and IPC, one additional component containing all buttons
+- qqElec103 + pin + ts??  
+-- Use of Pinia store; IPC electron-preload.js for open, read, process, write; toggled v-if display of UI elements  
+-- Read and process .txt, .csv and .md (Markdown) files with parsing of Markdown  
 
 ### Dependencies and QQ Conventions
 
