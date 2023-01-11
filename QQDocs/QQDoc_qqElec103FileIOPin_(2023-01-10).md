@@ -115,13 +115,13 @@ JSON-stringified: [{ id: 13, name: "Emmanuel Kant", quantity: 5 }, …]
 
 Rather than starting from scratch, this app builds on qqElec101Base by copying it and making changes:
 
-Nested list:
-1.  Major Category  
-    a. Minor Category  
+Nested list: use 3 spaces
+1.   Major Category
+   a. Minor Category  
       i. Sub-category  
-	b. Minor Category 2  
+   b. Minor Category 2  
       i. sub again  
-2. Second major category  
+2.   Second major category  
    a. minor cat 2.a  
    b. etc??  
 
