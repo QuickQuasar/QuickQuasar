@@ -1,8 +1,8 @@
 **qqElec103FileIOPin: Quick Quasar Electron with Local File IO using Pinia State Management**
 
-[Introduction 1](#_Toc121495063)
+[Introduction 1](#Introduction)
 
-[Resources 2](#_Toc121495064)
+[Resources 2](#Resources)
 
 [My Doco on Quasar V2 with new Elements 2](#_Toc121495065)
 
@@ -21,23 +21,68 @@
 
 [src-electron \> electron-main.js 5](#_Toc121495072)
 
-## Introduction
+# Introduction
 
 This distinctive aspect of Electron apps is that they can access local resources. This Quick Quasar app is developed from qq101Base by adding local file read and write, with the objective of performing the IO in the Pinia state management system, making the file information available to all modules.
 
 The crux of this application is getting the Inter-process Communication (IPC) working correctly between the render process, the main/server (?) process, and the Pinia store. Pinia apparently runs in a similar manner as the render process, without access to local resources. \*\*\* DESCRIBE What this is an hopefully in the end how it works!!\*\*\*
 
-Features:
+## Objective and Features:
 
-Perform local file IO from Pinia with access to stored data by several modules
+**Opbjective:** 
+Perform local file IO from Pinia with access to stored data by several modules.
 
-Read and process csv spreadsheet text file. This process employs the contextBridge mechanism.
+**Features:**
+- Read and process csv spreadsheet text file. This process employs the contextBridge mechanism.
 
-Output an equivalent JSON text file
+- Output an equivalent JSON text file
 
-File System window to select input file (later)
+F- ile System window to select input file (later)
 
-Log
+## Input
+
+Fixed test file path for Quick Quasar apps: C:\temp\QQTemp
+
+In this case, fixed file name: test.csv
+
+Simple structure, only several rows with minimal content: id: 13, name: "Emmanuel Kant", quantity: 5
+
+## Output
+
+Same folder, file name: testOut.json
+
+JSON-stringified: [{ id: 13, name: "Emmanuel Kant", quantity: 5 }, …]
+
+## User Interface
+
+![](RackMultipart20230110-1-qnsfgl_html_bf70d1a95efc58fe.png)  
+
+
+
+## Resources
+
+[https://www.electronjs.org/docs/latest/api/context-bridge](https://www.electronjs.org/docs/latest/api/context-bridge)
+
+github quasar discussion: [https://github.com/quasarframework/quasar/discussions](https://github.com/quasarframework/quasar/discussions)
+
+OpenDialog:
+
+[https://www.electronjs.org/docs/latest/api/dialog](https://www.electronjs.org/docs/latest/api/dialog)
+
+Current Project / App: qqElec207ExcelOccoONet \<\< What is status of that app??
+
+### My Doco on Quasar V2 with new Elements
+
+Quasar 2 Vue 3 Pinia Vite for QQ (2022-09-21).docx in All Development \> Quasar
+
+## Elements
+
+The elements of this app include those that are common among QQ apps: Quasar V2 (with Vue V3), Pinia, Eslint and optionally TypeScript, which is used in this app, and the D3 system of graphics and other capabilities, such as IO. Because D3 IO is aimed at web applications and does not deal with local files, it is not used in this Electron app, but its powerful graphics capabilites will be accentuated in oter QQ Electron apps.
+
+\*\*\* is this still the case? Really a mess getting to work with Prettier: they don't agree on single quotes; having the autocomplete is often a pain; …
+
+
+## Log
 
 | **Date** | **Comments** |
 | --- | --- |
@@ -67,55 +112,12 @@ ToDo:
 8. do a scan and determine what the major nodes are and their content.
 9. PUSH TO GITHUB!!
 
-## Resources
-
-[https://www.electronjs.org/docs/latest/api/context-bridge](https://www.electronjs.org/docs/latest/api/context-bridge)
-
-github quasar discussion: [https://github.com/quasarframework/quasar/discussions](https://github.com/quasarframework/quasar/discussions)
-
-OpenDialog:
-
-[https://www.electronjs.org/docs/latest/api/dialog](https://www.electronjs.org/docs/latest/api/dialog)
-
-Current Project / App: qqElec207ExcelOccoONet \<\< What is status of that app??
-
-### My Doco on Quasar V2 with new Elements
-
-Quasar 2 Vue 3 Pinia Vite for QQ (2022-09-21).docx in All Development \> Quasar
-
-## Elements
-
-The elements of this app include those that are common among QQ apps: Quasar V2 (with Vue V3), Pinia, Eslint and optionally TypeScript, which is used in this app, and the D3 system of graphics and other capabilities, such as IO. Because D3 IO is aimed at web applications and does not deal with local files, it is not used in this Electron app, but its powerful graphics capabilites will be accentuated in oter QQ Electron apps.
-
-\*\*\* is this still the case? Really a mess getting to work with Prettier: they don't agree on single quotes; having the autocomplete is often a pain; …
-
-## Objectives
-
-Perform File Read and Write from Pinia store.
-
-## Input
-
-Fixed test file path for Quick Quasar apps: C:\temp\QQTemp
-
-In this case, fixed file name: test.csv
-
-Simple structure, only several rows with minimal content: id: 13, name: "Emmanuel Kant", quantity: 5
-
-## Output
-
-Same folder, file name: testOut.json
-
-JSON-stringified: [{ id: 13, name: "Emmanuel Kant", quantity: 5 }, …]
-
-## User Interface
-
-![](RackMultipart20230110-1-qnsfgl_html_bf70d1a95efc58fe.png)
 
 ## Steps
 
 Rather than starting from scratch, this app builds on qqElec101Base by copying it and making changes:
 
-Nested list: use 3 spaces
+Nested list: use 4 spaces in CommonMark, which GitHub uses
 * Major Category
     * Minor Category  
         * Sub-category  
