@@ -115,6 +115,17 @@ JSON-stringified: [{ id: 13, name: "Emmanuel Kant", quantity: 5 }, …]
 
 Rather than starting from scratch, this app builds on qqElec101Base by copying it and making changes:
 
+Nested list:
+1.  Major Category
+    a. Minor Category
+      i. Sub-category
+	b. Minor Category 2
+      i. sub again
+2. Second major category
+   a. minor cat 2.a 
+   b. etc??
+
+
 - 1. Note: Using the D: drive for this series of developments
 - 2. Go to parent directory D:\All\_Prog2\_QuickQuasar\QQv2\_Electron for Electron apps
 - 3. Copy qqElec101Base to: qqElec103FileIOPin (do not copy Node\_Modules)
