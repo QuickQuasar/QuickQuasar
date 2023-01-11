@@ -44,13 +44,8 @@ Log
 | 12/11/22 | Reverting to no Pinia and use the "isFile" example that worked; what was problem? |
 | 1/5/23 | Getting back to this after spending a bundle of time on OccO – ESCO integration! |
 | 1/9/23 | Going crazy with fileOpenDialog – async, etc;NOTE: console.log shows in DevTools window for Renderer!
- |
-|
- |
- |
-|
- |
- |
+
+![UI Screenshot](images/qqElec103_UI_2023-01-10.jpg)
 
 ToDo:
 
