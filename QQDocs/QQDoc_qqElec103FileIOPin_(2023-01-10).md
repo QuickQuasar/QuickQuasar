@@ -115,15 +115,15 @@ JSON-stringified: [{ id: 13, name: "Emmanuel Kant", quantity: 5 }, …]
 
 Rather than starting from scratch, this app builds on qqElec101Base by copying it and making changes:
 
-1. Note: Using the D: drive for this series of developments
-2. Go to parent directory D:\All\_Prog2\_QuickQuasar\QQv2\_Electron for Electron apps
-3. Copy qqElec101Base to: qqElec103FileIOPin (do not copy Node\_Modules)
-4. Revise with new program identification
-  1. Description: Quick Quasar Electron app implementing local file IO with Pinia
-  2. vue
-  3. vue
-  4. vue
-  5. …
+- 1. Note: Using the D: drive for this series of developments
+- 2. Go to parent directory D:\All\_Prog2\_QuickQuasar\QQv2\_Electron for Electron apps
+- 3. Copy qqElec101Base to: qqElec103FileIOPin (do not copy Node\_Modules)
+- 4. Revise with new program identification
+-- a. Description: Quick Quasar Electron app implementing local file IO with Pinia
+-- b. vue
+-- c. vue
+-- d. vue
+-- e. …
 5. Run npm install
 6. Execute with: yarn quasar dev -m electron
 7. NOTE for first GitHub: Rather than cophy to D: Github at the outset, go ahead and deveop the app and get it running on the D:\QuickQuasar folder. Once working, copy over (all including NM folder or not?) to Github…
