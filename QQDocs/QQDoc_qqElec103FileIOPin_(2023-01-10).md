@@ -1,35 +1,17 @@
-**qqElec103FileIOPin: Quick Quasar Electron with Local File IO using Pinia State Management**
+# qqElec103FileIOPin: Quick Quasar Electron with Local File IO using Pinia State Management
 
-[Introduction 1](#Introduction)
-
-[Resources 2](#Resources)
-
-[My Doco on Quasar V2 with new Elements 2](#_Toc121495065)
-
-[Elements 2](#_Toc121495066)
-
-[Objectives 2](#_Toc121495067)
-
-[User Interface 3](#_Toc121495068)
-
-[Steps 3](#_Toc121495069)
-
-[Problems 4](#_Toc121495070)
-[Problems 4](#Problems)
-
-[src-electron \> preload.js 5](#_Toc121495071)
-
-[src-electron \> electron-main.js 5](#_Toc121495072)
+## TOC
+{:toc}
 
 # Introduction
 
 This distinctive aspect of Electron apps is that they can access local resources. This Quick Quasar app is developed from qq101Base by adding local file read and write, with the objective of performing the IO in the Pinia state management system, making the file information available to all modules.
 
-The crux of this application is getting the Inter-process Communication (IPC) working correctly between the render process, the main/server (?) process, and the Pinia store. Pinia apparently runs in a similar manner as the render process, without access to local resources. \*\*\* DESCRIBE What this is an hopefully in the end how it works!!\*\*\*
+The crux of this application is getting the Inter-process Communication (IPC) working correctly between the renderer process, the main (Node.js) process, and the Pinia store. Pinia runs as a renderer process, without access to local resources. **DESCRIBE What this is an hopefully in the end how it works!!**
 
 ## Objective and Features:
 
-**Opbjective:** 
+**Opbjective:**  
 Perform local file IO from Pinia with access to stored data by several modules.
 
 **Features:**
@@ -37,27 +19,35 @@ Perform local file IO from Pinia with access to stored data by several modules.
 
 - Output an equivalent JSON text file
 
-F- ile System window to select input file (later)
+- File System window (OpenFileDialog) to select input file
 
 ## Input
 
-Fixed test file path for Quick Quasar apps: C:\temp\QQTemp
+Any .txt, .csv or .md file; default folder is: C:\temp\QQTemp
 
-In this case, fixed file name: test.csv
-
-Simple structure, only several rows with minimal content: id: 13, name: "Emmanuel Kant", quantity: 5
+The small test files are: 
+- qqElec103_TestText.txt  
+    this file is simply converted to a array of strings and listed  
+- qqElec103_TestCSV.csv  
+    this file is converted to an array of JSON objects, each header being an element name.  The first row of the file should contain header columns.  The test file has a simple structure, only several rows with minimal content:
+    id     name     quantity
+    13    Peaches    5  
+- qqElec103_TestMarkdown.md  
+    currently this is simply listed; later display the formatted output.  
 
 ## Output
 
-Same folder, file name: testOut.json
+Same folder, Output file name = <Input File Name> + _OUT + extension
 
-JSON-stringified: [{ id: 13, name: "Emmanuel Kant", quantity: 5 }, …]
+The CSV JSON-stringified output will be:  
+- [{ id: 13, name: "Emmanuel Kant", quantity: 5 }, …]
 
 ## User Interface
 
-![](RackMultipart20230110-1-qnsfgl_html_bf70d1a95efc58fe.png)  
+The User Interface upon opening is below.  Note that the components in each part of the screen are identified to show where that information comes from, but these parenthetical comments may be cleared by toggling the Toggle UI Element button.  
 
 
+![UI Screenshot](images/qqElec103_UI_2023-01-10.jpg)
 
 ## Resources
 
@@ -91,7 +81,6 @@ The elements of this app include those that are common among QQ apps: Quasar V2 
 | 1/5/23 | Getting back to this after spending a bundle of time on OccO – ESCO integration! |
 | 1/9/23 | Going crazy with fileOpenDialog – async, etc;NOTE: console.log shows in DevTools window for Renderer!
 
-![UI Screenshot](images/qqElec103_UI_2023-01-10.jpg)
 
 ToDo:
 
