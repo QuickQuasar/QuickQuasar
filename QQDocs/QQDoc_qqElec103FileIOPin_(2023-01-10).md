@@ -117,13 +117,13 @@ Rather than starting from scratch, this app builds on qqElec101Base by copying i
 
 Nested list: use 3 spaces
 1.   Major Category
-   a. Minor Category  
-      i. Sub-category  
-   b. Minor Category 2  
-      i. sub again  
+   - a. Minor Category  
+      -- i. Sub-category  
+   - b. Minor Category 2  
+      -- i. sub again  
 2.   Second major category  
-   a. minor cat 2.a  
-   b. etc??  
+   - a. minor cat 2.a  
+   - b. etc??  
 
 
 - 1. Note: Using the D: drive for this series of developments
